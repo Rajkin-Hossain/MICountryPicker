@@ -43,7 +43,7 @@ open class MICountryPicker: UITableViewController {
         guard let path = resourceBundle.path(forResource: "CallingCodes", ofType: "plist") else { return [] }
         return NSArray(contentsOfFile: path) as! [[String: String]]
     }()
-    fileprivate var searchController: UISearchController!
+    public var searchController: UISearchController!
     fileprivate var filteredList = [MICountry]()
     fileprivate var unsourtedCountries : [MICountry] {
         let locale = Locale.current
